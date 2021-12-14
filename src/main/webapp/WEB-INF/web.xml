@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>TechBlog</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.tech.blog.servlets.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/SynServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.tech.blog.servlets.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>com.tech.blog.servlets.LogoutServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EditServlet</servlet-name>
+		<servlet-class>com.tech.blog.servlets.EditServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EditServlet</servlet-name>
+		<url-pattern></url-pattern>
+		<url-pattern>/Edit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddPostServlet</servlet-name>
+		<servlet-class>com.tech.blog.servlets.AddPostServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>AddPostServlet</servlet-name>
+	<url-pattern>/Post</url-pattern>
+	<url-pattern>/Posts</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>LikeServlet</servlet-name>
+	<servlet-class>com.tech.blog.servlets.LikeServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>LikeServlet</servlet-name>
+	<url-pattern>/Like</url-pattern>
+	<url-pattern>/LikeServ</url-pattern>
+	</servlet-mapping>
+
+
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+</web-app>
